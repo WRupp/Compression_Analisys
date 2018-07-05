@@ -67,7 +67,7 @@ if  Image_Number == Initial_Image
     ColumnMean(i) = mean(MyImage(:,i));
     end
 
-    Darker_Columns = find(ColumnMean < 80 ) ; 
+    Darker_Columns = find(ColumnMean < 50 ) ; 
 
     CP_LeftBorder = Darker_Columns(1);
     CP_RightBorder = Darker_Columns(end); 

@@ -20,7 +20,7 @@ function [NumFramesCam1] = video2images(VideoFileName,ImageBaseName)
         Image_name = [filename  number_ext '.' format_image];
         I = (read(cam1,j));
         J = I; 
-        imwrite(J, ['Images\' Image_name ], 'Compression', 'None');
+        imwrite(J,  Image_name , 'Compression', 'None');
         waitbar(j /NumFramesCam1)
     end
     close(h)
