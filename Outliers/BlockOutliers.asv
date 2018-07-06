@@ -1,0 +1,19 @@
+function [A] = BlockOutliers(A,N_Blocks)
+
+
+S = size(A);
+% N_Blocks = 100;
+
+Block = ceil(S(1) / N_Blocks) ;
+
+for i = 1 : N_Blocks
+   
+    interval = (i-1) * Block : i * Block ;
+    
+    A(interval) = fixOutliers(A(interval));
+    
+end
+
+
+
+end
